@@ -185,6 +185,19 @@
 	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
 	<!--app JS-->
 	<script src="assets/js/app.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+    <!-- Custom JS -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/lga.js"></script>
 
 	<script>
 		 $(document).ready(() => {
@@ -200,41 +213,41 @@
 		function diplomaApp(el) {
 			el.preventDefault()
 
-			// let url = `{{ url('members/add') }}`;
+			let url = `{{ url('diploma-form') }}`;
     		let data = new FormData(el.target)
 			
-console.log(data)
-			// let url = 'http://127.0.0.1:8000/';
-			// let data = new FormData(el.target)
 
-			// goPost(url, data)
-			// .then(res => {
-			// 	// spin('member')
-			// 	showAlert(true, res.message)
-			// })
-			// .catch(err => {
-			// 	handleFormError(err);
-			// })
+			goPost(url, data)
+				.then(res => {
+					Swal.fire({
+					title: "Successful",
+					text: "Your application has been received. A member of our team will contact you shortly.",
+					icon: "success"
+				})
+			})
+			.catch(err => {
+				handleFormError(err);
+			})
 		}
 
 		function memberApp(el) {
 			el.preventDefault()
 
-			// let url = `{{ url('members/add') }}`;
+			let url = `{{ url('membership-form') }}`;
     		let data = new FormData(el.target)
 			
-console.log(data)
-			// let url = 'http://127.0.0.1:8000/';
-			// let data = new FormData(el.target)
 
-			// goPost(url, data)
-			// .then(res => {
-			// 	// spin('member')
-			// 	showAlert(true, res.message)
-			// })
-			// .catch(err => {
-			// 	handleFormError(err);
-			// })
+			goPost(url, data)
+				.then(res => {
+					Swal.fire({
+					title: "Successful",
+					text: "Your application has been received. A member of our team will contact you shortly.",
+					icon: "success"
+				})
+			})
+			.catch(err => {
+				handleFormError(err);
+			})
 		}
 	</script>
 
