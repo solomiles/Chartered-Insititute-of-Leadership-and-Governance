@@ -91,7 +91,7 @@
 												<div class="mb-4">
 													<label for="formFile" class="form-label">What country are you applying from?</label>
 													<select name="country" class="form-select rounded-5" id="inputSelectCountry" aria-label="Default select example">
-														<option selected="">Select Country</option>
+														<option selected>Select Country</option>
 														<option value="Afghanistan">Afghanistan</option>
 														<option value="Albania">Albania</option>
 														<option value="Algeria">Algeria</option>
@@ -211,7 +211,7 @@
 														<option value="Kyrgyzstan">Kyrgyzstan</option>
 														<option value="Lao">Lao People's Democratic Republic</option>
 														<option value="Latvia">Latvia</option>
-														<option value="Lebanon" selected>Lebanon</option>
+														<option value="Lebanon" >Lebanon</option>
 														<option value="Lesotho">Lesotho</option>
 														<option value="Liberia">Liberia</option>
 														<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
@@ -370,7 +370,7 @@
 												<div class="mb-4">
 													<label for="formFile" class="form-label">What country are you applying from?</label>
 													<select name="country" class="form-select rounded-5" id="inputSelectCountry" aria-label="Default select example">
-														<option selected="">Select Country</option>
+														<option selected>Select Country</option>
 														<option value="Afghanistan">Afghanistan</option>
 														<option value="Albania">Albania</option>
 														<option value="Algeria">Algeria</option>
@@ -490,7 +490,7 @@
 														<option value="Kyrgyzstan">Kyrgyzstan</option>
 														<option value="Lao">Lao People's Democratic Republic</option>
 														<option value="Latvia">Latvia</option>
-														<option value="Lebanon" selected>Lebanon</option>
+														<option value="Lebanon">Lebanon</option>
 														<option value="Lesotho">Lesotho</option>
 														<option value="Liberia">Liberia</option>
 														<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
