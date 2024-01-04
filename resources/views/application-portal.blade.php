@@ -672,7 +672,7 @@
     <script src="assets/js/lga.js"></script>
 
 	<script>
-		 $(document).ready(() => {
+		$(document).ready(() => {
 			$('#diploma-form').submit(el => {
 			diplomaApp(el)
 			})
@@ -680,6 +680,7 @@
 			$('#membership-form').submit(el => {
 			memberApp(el)
 			})
+			
 		});
 
 		function diplomaApp(el) {
@@ -696,10 +697,22 @@
 					text: "Your application has been received. A member of our team will contact you shortly.",
 					icon: "success"
 				})
+				setTimeout(() => {
+				location.reload();
+				}, 3000);
 			})
 			.catch(err => {
+				Swal.fire({
+					title: "Oops...",
+					text: "Something went wrong, try again later.",
+					icon: "error"
+				})
 				handleFormError(err);
+				setTimeout(() => {
+				location.reload();
+				}, 3000);
 			})
+
 		}
 
 		function memberApp(el) {

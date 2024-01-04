@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +30,7 @@ Route::prefix('admin')->group(function () {
     // Route::post('resend-email-code', [App\Http\Controllers\Clients\AuthController::class, 'resendVerificationCode']);
 });
 Route::get('/', function () {
+    
     return view('application-portal');
 });
 

@@ -36,7 +36,7 @@ class MembershipController extends Controller
             ], 400);
         }
 
-        $resume_file = $request['resume'];
+        $resume_file = $request->resume;
         $stored_resume = Storage::put('/public/members/resume', $resume_file);
         if ($stored_resume) {
             $resume = basename($stored_resume);
