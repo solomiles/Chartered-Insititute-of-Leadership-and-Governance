@@ -729,9 +729,15 @@
 					text: "Your application has been received. A member of our team will contact you shortly.",
 					icon: "success"
 				})
+				setTimeout(() => {
+				location.reload();
+				}, 3000);
 			})
 			.catch(err => {
 				handleFormError(err);
+				setTimeout(() => {
+				location.reload();
+				}, 3000);
 			})
 		}
 	</script>
