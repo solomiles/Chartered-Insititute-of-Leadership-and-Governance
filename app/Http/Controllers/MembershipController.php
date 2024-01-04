@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Membership;
+use App\Traits\EmailTrait;
 use Illuminate\Support\Facades\Storage;
 
 
 class MembershipController extends Controller
 {
+    use EmailTrait;
     /**
      * create/submit membership form
      * @param Request $request
@@ -68,6 +70,7 @@ class MembershipController extends Controller
 
         $membership->save();
 
+        $this->sendSingleEmail('Welcome to Chartered Institute of Leadership and Governance', $request->email, ['firstname' => $request->firstname], 'welcome');
         return response([
             'status' => true,
             'message' => 'Application success'

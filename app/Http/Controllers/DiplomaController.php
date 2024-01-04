@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Diploma;
+use App\Traits\EmailTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\Validator;
 class DiplomaController extends Controller
 {
     //
+    use EmailTrait;
     /**
      * create/submit membership form
      * @param Request $request
@@ -56,7 +58,8 @@ class DiplomaController extends Controller
          $diploma->country = $request->country;
  
          $diploma->save();
- 
+         $this->sendSingleEmail('Welcome to Chartered Institute of Leadership and Governance', $request->email, ['firstname' => $request->firstname], 'welcome');
+
          return response([
              'status' => true,
              'message' => 'Application success'
