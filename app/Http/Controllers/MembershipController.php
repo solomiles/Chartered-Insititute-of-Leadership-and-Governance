@@ -49,7 +49,7 @@ class MembershipController extends Controller
             ], 400);
         }
 
-        $passport_file = $request['resume'];
+        $passport_file = $request->passport;
         $stored_passport = Storage::put('/public/members/passport', $passport_file);
         if ($stored_passport) {
             $passport = basename($stored_passport);
