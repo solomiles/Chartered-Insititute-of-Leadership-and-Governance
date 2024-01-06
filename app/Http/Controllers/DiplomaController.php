@@ -58,8 +58,11 @@ class DiplomaController extends Controller
          $diploma->country = $request->country;
  
          $diploma->save();
+        //  membership notification
          $this->sendSingleEmail('Welcome to Chartered Institute of Leadership and Governance', $request->email, ['firstname' => $request->firstname], 'welcome');
+        // admin notification
 
+        $this->sendSingleEmail('Chartered Institute of Leadership and Governance', 'info@cilgglobal.com', ['header' => 'New Diploma Registration'], 'registration-notification');
          return response([
              'status' => true,
              'message' => 'Application success'

@@ -14,21 +14,31 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//all admin routes
 Route::prefix('admin')->group(function () {
-    // Register
-    // Route::post('register', [App\Http\Controllers\Clients\AuthController::class, 'register']);
-    // // Login
-    // Route::post('login', [App\Http\Controllers\Clients\AuthController::class, 'login']);
-    // // Forgot password Email
-    // Route::post('forgot-password', [App\Http\Controllers\Clients\AuthController::class, 'sendPasswordResetEmail']);
 
-    // // Reset password
-    // Route::post('reset-password', [App\Http\Controllers\Clients\AuthController::class, 'resetPassword']);
-    // // Verify Email Code
-    // Route::post('verify-email-code', [App\Http\Controllers\Clients\AuthController::class, 'verifyCode']);
-    // // Resend Email code
-    // Route::post('resend-email-code', [App\Http\Controllers\Clients\AuthController::class, 'resendVerificationCode']);
+    // Login Admin
+    Route::post('login-in', [App\Http\Controllers\Admins\AuthController::class, 'login']);
+
+    // Login Page
+    Route::get('/login', function () {
+    
+        return view('authentication-signin');
+    });
+
+    /* PROTECTED */
+    Route::group(['middleware' => ['auth']], function () {
+        //logout Admin
+        Route::get('logout', [App\Http\Controllers\Admins\AuthController::class, 'logout']);
+        // Dashboard
+        Route::get('dashboard', [App\Http\Controllers\Admins\AdminController::class, 'dashboard']);
+        // Diploma
+        Route::get('diploma', [App\Http\Controllers\Admins\AdminController::class, 'diploma']);
+        // Membership
+        Route::get('membership', [App\Http\Controllers\Admins\AdminController::class, 'membership']);
+    });
 });
+
 Route::get('/', function () {
     
     return view('application-portal');
