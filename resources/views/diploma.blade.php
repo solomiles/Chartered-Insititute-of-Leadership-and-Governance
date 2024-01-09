@@ -34,7 +34,7 @@
                                             <td>{{$diploma->firstname}}</td>
                                             <td> {{$diploma->lastname}} </td>
                                             <td>{{$diploma->email}}</td>
-                                            <td><a href=" {{ Storage::url('diploma/'. $diploma->resume) }}" download>{{$diploma->resume}}</a></td>
+                                            <td><a href=" {{ Storage::url('diploma/'. $diploma->resume) }}" download="{{$diploma->firstname}}">{{$diploma->resume}}</a></td>
                                             <td>{{$diploma->program}}</td>
                                             <td>{{$diploma->country}}</td>
                                             <td>

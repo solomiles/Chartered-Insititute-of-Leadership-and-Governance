@@ -62,7 +62,7 @@ class DiplomaController extends Controller
          $this->sendSingleEmail('Welcome to Chartered Institute of Leadership and Governance', $request->email, ['firstname' => $request->firstname], 'welcome');
         // admin notification
 
-        $this->sendSingleEmail('Chartered Institute of Leadership and Governance', 'info@cilgglobal.org', ['header' => 'New Diploma Registration'], 'registration-notification');
+        $this->sendAdminEmail('Chartered Institute of Leadership and Governance','info@cilgglobal.org', ['header' => 'New Diploma Registration'], 'registration-notification');
          return response([
              'status' => true,
              'message' => 'Application success'
