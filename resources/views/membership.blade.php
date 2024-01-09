@@ -32,8 +32,8 @@
                                             <td>{{$membership->firstname}}</td>
                                             <td> {{$membership->lastname}} </td>
                                             <td>{{$membership->email}}</td>
-                                            <td><a href=" {{ Storage::url('members/resume/'. $membership->resume) }}" download>{{$membership->resume}}</a></td>
-                                            <td><a href=" {{ Storage::url('members/passport/'. $membership->passport) }}" download>{{$membership->passport}}</a></td>
+                                            <td><a href=" {{ url(Storage::url('members/resume/'. $membership->resume)) }}" download>{{$membership->resume}}</a></td>
+                                            <td><a href=" {{ url(Storage::url('members/passport/'. $membership->passport)) }}" download>{{$membership->passport}}</a></td>
                                             <td>{{$membership->country}}</td>
                                             <td>
 												<div class=" btn-group">
@@ -45,7 +45,7 @@
 													<span class="col-md-3"></span>
 													<div class="col-md-4">
 														<button type="button" class="btn btn-outline-danger">
-															<span class="lni lni-download"></span>
+															<span class="lni lni-trash"></span>
 														</button>
 													</div>
 													

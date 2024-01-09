@@ -47,7 +47,7 @@
 													<span class="col-md-3"></span>
 													<div class="col-md-4">
 														<button type="button" class="btn btn-outline-danger">
-															<span class="lni lni-download"></span>
+															<span class="lni lni-trash"></span>
 														</button>
 													</div>
 													
