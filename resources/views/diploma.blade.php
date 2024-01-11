@@ -29,9 +29,11 @@
                                         </tr>
                                     </thead>
 								<tbody>	
+                                    @php $i = 0; @endphp
 									@foreach($diplomas as $diploma)
+                                        @php $i++; @endphp
                                     	<tr role="row" class="odd">
-                                            <td class="sorting_1">1</td>
+                                            <td class="sorting_1"> {{$i}} </td>
                                             <td>{{$diploma->firstname}}</td>
                                             <td> {{$diploma->lastname}} </td>
                                             <td>{{$diploma->email}}</td>
