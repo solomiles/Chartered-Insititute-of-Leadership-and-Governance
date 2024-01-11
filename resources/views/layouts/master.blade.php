@@ -17,8 +17,9 @@
 	<link href="{{ url('assets/css/pace.min.css') }}" rel="stylesheet" />
 	<script src="{{ url('assets/js/pace.min.js') }}"></script>
 	<!-- Bootstrap CSS -->
-	<link href="{{ url('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+	
 	<link href="{{ url('assets/css/bootstrap-extended.css') }}" rel="stylesheet">
+	<link href="{{ url('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<link href="{{ url('assets/css/app.css') }}" rel="stylesheet">
 	<link href="{{ url('assets/css/icons.css') }}" rel="stylesheet">
@@ -124,9 +125,9 @@
 	<script src="{{ url('assets/plugins/apexcharts-bundle/js/apexcharts.min.js') }}"></script>
 	<script src="{{ url('assets/plugins/chartjs/js/Chart.min.js') }}"></script>
 	<script src="{{ url('assets/plugins/chartjs/js/Chart.extension.js') }}"></script>
-	<script src="{{ url('assets/js/index.js') }}"></script>
+	<!-- <script src="{{ url('assets/js/index.js') }}"></script> -->
 	<script src="{{ url('assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
-	<script src="{{ url('assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
+	<!-- <script src="{{ url('assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script> -->
     <!-- <script src="{{ url('assets/js/index.js') }}"></script> -->
 	<script src="{{ url('assets/js/app.js') }}"></script>
 
