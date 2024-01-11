@@ -124,9 +124,9 @@
 	<script src="{{ url('assets/plugins/apexcharts-bundle/js/apexcharts.min.js') }}"></script>
 	<script src="{{ url('assets/plugins/chartjs/js/Chart.min.js') }}"></script>
 	<script src="{{ url('assets/plugins/chartjs/js/Chart.extension.js') }}"></script>
-	<!-- <script src="{{ url('assets/js/index.js') }}"></script> -->
+	<script src="{{ url('assets/js/index.js') }}"></script>
 	<script src="{{ url('assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
-	<!-- <script src="{{ url('assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script> -->
+	<script src="{{ url('assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
     <!-- <script src="{{ url('assets/js/index.js') }}"></script> -->
 	<script src="{{ url('assets/js/app.js') }}"></script>
 
