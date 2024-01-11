@@ -47,8 +47,13 @@
 													</div>
 													<span class="col-md-3"></span>
 													<div class="col-md-4">
-														<button type="button" class="btn btn-outline-danger">
-															<span class="lni lni-trash"></span>
+														<button onclick="removeDiploma()" class="btn btn-outline-danger remove-btn">
+															<span id="remove-txt" class="lni lni-trash"></span>
+                                                            
+                                                            <div class="spinner-border spinner-border-sm btn-pr p-1"
+                                                                id="remove-spinner" style="display: none;" role="status">
+                                                                <!-- <span class="sr-only">Deleting...</span> -->
+                                                            </div>
 														</button>
 													</div>
 													
@@ -87,6 +92,28 @@
             </div>
 	
 		</div>
+        <script>
+            // Remove Diploma
+            function removeDiploma() {
+                spin('remove')
+
+                let url = `{{ url('admin/diploma/delete/' . $diploma->id) }}`;
+
+                goGet(url)
+                    .then(res => {
+                        spin('remove')
+                        showAlert(true, res.message)
+
+                        setTimeout(() => {
+                            location.reload()
+                        }, 2000)
+                    })
+                    .catch(err => {
+                        spin('status')
+                        showAlert(false, "Oops! Something's not right. Reload Page")
+                    })
+            }
+        </script>
 		<!--end page wrapper -->
 @endsection		
 

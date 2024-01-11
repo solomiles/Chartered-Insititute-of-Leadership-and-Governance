@@ -36,6 +36,10 @@ Route::prefix('admin')->group(function () {
         Route::get('diploma', [App\Http\Controllers\Admins\AdminController::class, 'diploma']);
         // Membership
         Route::get('membership', [App\Http\Controllers\Admins\AdminController::class, 'membership']);
+        // Delete Diploma
+        Route::get('diploma/delete/{id}', [App\Http\Controllers\Admins\AdminController::class, 'deleteDiploma']);
+        // Delete Membership
+        Route::get('membership/delete/{id}', [App\Http\Controllers\Admins\AdminController::class, 'deleteMembership']);
     });
 });
 

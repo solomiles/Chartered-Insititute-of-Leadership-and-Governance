@@ -130,6 +130,7 @@
 	<!-- <script src="{{ url('assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script> -->
     <!-- <script src="{{ url('assets/js/index.js') }}"></script> -->
 	<script src="{{ url('assets/js/app.js') }}"></script>
+	<script src="{{ url('assets/js/custom.js') }}"></script>
 
 	<!--app JS-->
 	<script>
@@ -172,6 +173,7 @@
         //     //return false;
         //     },
         // })
+		
     </script>
 </body>
 

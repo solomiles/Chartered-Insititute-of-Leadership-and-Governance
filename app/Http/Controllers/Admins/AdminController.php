@@ -48,4 +48,35 @@ class AdminController extends Controller
 
         return view('membership', ['memberships' => $memberships]);
     }
+    /**
+     * Delete diploma record
+     * @param int $id
+     * @return response
+     */
+    public function deleteDiploma($id)
+    {
+        $diploma = Diploma::firstWhere('id', $id);
+        $diploma->delete();
+
+        return response([
+            'status' => true,
+            'message' => 'Deleted successfully!',
+        ], 200);
+    }
+
+    /**
+     * Delete Membership record
+     * @param int $id
+     * @return response
+     */
+    public function deleteMembership($id)
+    {
+        $membership = Membership::firstWhere('id', $id);
+        $membership->delete();
+
+        return response([
+            'status' => true,
+            'message' => 'Deleted successfully!',
+        ], 200);
+    }
 }

@@ -68,5 +68,7 @@ class DiplomaController extends Controller
              'message' => 'Application success'
          ], 200);
  
-     }
+    }
+
+    
 }
