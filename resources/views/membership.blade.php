@@ -35,8 +35,8 @@
                                             <td>{{$membership->firstname}}</td>
                                             <td> {{$membership->lastname}} </td>
                                             <td>{{$membership->email}}</td>
-                                            <td><a href=" {{ url('storage/members/resume/'. $membership->resume) }}" download="{{$membership->firstname}}">{{$membership->resume}}</a></td>
-                                            <td><a href=" {{ url('storage/members/passport/'. $membership->passport) }}" download="{{$membership->firstname}}">{{$membership->passport}}</a></td>
+                                            <td><a href=" {{ url('admin/membership/download/resume/'. $membership->id) }}" >{{$membership->resume}}</a></td>
+                                            <td><a href=" {{ url('admin/membership/download/passport/'. $membership->id) }}" >{{$membership->passport}}</a></td>
                                             <td>{{$membership->country}}</td>
                                             <td>
 												<div class=" btn-group">

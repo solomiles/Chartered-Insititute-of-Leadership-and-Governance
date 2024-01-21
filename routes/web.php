@@ -40,6 +40,12 @@ Route::prefix('admin')->group(function () {
         Route::get('diploma/delete/{id}', [App\Http\Controllers\Admins\AdminController::class, 'deleteDiploma']);
         // Delete Membership
         Route::get('membership/delete/{id}', [App\Http\Controllers\Admins\AdminController::class, 'deleteMembership']);
+         // Diploma rresume download
+         Route::get('diploma/download/resume/{id}', [App\Http\Controllers\Admins\AdminController::class, 'downloadDiplomaResume']);
+         // Membership resume download
+         Route::get('membership/download/resume/{id}', [App\Http\Controllers\Admins\AdminController::class, 'downloadMemberResume']);
+         // membership passport download
+         Route::get('membership/download/passport/{id}', [App\Http\Controllers\Admins\AdminController::class, 'downloadMemberPassport']);
     });
 });
 

@@ -11,8 +11,9 @@
 	<link href="assets/css/pace.min.css" rel="stylesheet" />
 	<script src="assets/js/pace.min.js"></script>
 	<!-- Bootstrap CSS -->
+	<link href="{{ url('assets/css/bootstrap-extended.css') }}" rel="stylesheet">
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<!-- <link href="assets/css/bootstrap-extended.css" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="assets/css/icons.css" rel="stylesheet">
@@ -669,7 +670,7 @@
     <!-- Custom JS -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/lga.js"></script>
+    <!-- <script src="assets/js/lga.js"></script> -->
 
 	<script>
 		$(document).ready(() => {

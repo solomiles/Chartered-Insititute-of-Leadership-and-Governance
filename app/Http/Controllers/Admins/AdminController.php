@@ -7,6 +7,7 @@ use App\Models\Diploma;
 use App\Models\Membership;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -78,5 +79,33 @@ class AdminController extends Controller
             'status' => true,
             'message' => 'Deleted successfully!',
         ], 200);
+    }
+    /**
+     * Download diploma resume
+     * @param int $id
+     */
+    public function downloadDiplomaResume($id)
+    {
+        $resume = Diploma::where('id', $id)->firstOrFail();
+        return Storage::download('/storage/diploma/' .$resume->resume);
+    }
+    /**
+     * Download membership resume
+     * @param int $id
+     */
+    public function downloadMemberResume($id)
+    {
+        
+        $resume = Membership::where('id', $id)->firstOrFail();
+        return Storage::download('/storage/members/resume/' .$resume->resume);
+    }
+    /**
+     * Download membership passport
+     * @param int $id
+     */
+    public function downloadMemberPassport($id)
+    {
+        $passport = Membership::select('passport')->where('id', $id)->first();
+        return Storage::download('/storage/members/passport/' .$passport);
     }
 }
